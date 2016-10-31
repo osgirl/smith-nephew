@@ -9,7 +9,7 @@ describe('The main view', function () {
   });
 
   it('should include jumbotron with correct data', function() {
-    expect(page.h1El.getText()).toBe('Global Business Solutions');
+    expect(page.h1SpanEl.getText()).toBe('Welcome to');
   });
 
   it('should list more than 5 awesome things', function () {
