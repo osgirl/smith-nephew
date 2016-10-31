@@ -42,6 +42,10 @@ $content-color: #999;
 /**
 GLOBAL
 */
+.badge {
+	background-color: $gray-lighter;
+	color: $primary-color;
+}
 .btn-select {
 	color: #fff;
 	background-color: $gray-dark;
