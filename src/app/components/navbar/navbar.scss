@@ -1,0 +1,31 @@
+.acme-navbar-text{
+  color: white;
+}
+
+a {
+  color: black;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0;
+  line-height: 1.25em;
+}
+
+a:hover, a:focus {
+  color: greenyellow;
+}
+
+@media (min-width: 768px) {
+	.navbar-main {
+		height: 85px;
+		border-top: 4px solid $primary-color;
+		border-bottom: 1px solid #ccc;
+
+		.navbar-nav > li > a {
+			padding-top: 30px;
+			padding-bottom: 30px;
+		}
+	}
+}
+

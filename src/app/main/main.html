@@ -1,0 +1,123 @@
+<div>
+	<acme-navbar creation-date="main.creationDate"></acme-navbar>
+</div>
+<!-- Second Navigation -->
+<nav class="navbar navbar-default navbar-sub">
+	<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+		</div>
+		<div id="navbar" class="collapse navbar-collapse">
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="#">I Have a Request</a></li>
+				<li><a href="#">I Have a Question</a></li>
+				<li><a href="#">I Have a Issue</a></li>
+				<li><a href="#">Contact Us</a></li>
+			</ul>
+			<form class="navbar-form navbar-right" role="search">
+				<div class="input-group">
+					<input type="text" class="form-control" placeholder="Search">
+					<span class="input-group-btn">
+						<button type="submit" class="btn btn-default"><i class="glyphicon glyphicon-search"></i></button>
+					</span>
+				</div>
+			</form>
+		</div><!-- /.nav-collapse -->
+	</div><!-- /.container -->
+</nav><!-- /.navbar -->
+<!-- Main jumbotron for a primary marketing message or call to action -->
+<div class="jumbotron text-center">
+	<div class="container">
+		<h1><span>Welcome to</span><br>Global Business Solutions</h1>
+		<div class="row">
+			<div class="col-lg-8 col-lg-offset-2">
+				<div class="input-group input-group-lg">
+					<input type="text" class="form-control" placeholder="Search for...">
+					<span class="input-group-btn">
+			<button class="btn btn-default" type="button"><i class="glyphicon glyphicon-search"></i></button>
+		  </span>
+				</div><!-- /input-group -->
+			</div><!-- /.col-lg-6 -->
+		</div><!-- /.row -->
+	</div>
+</div>
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-9">
+			<div class="row sect">
+				<div class="col-xs-12 col-sm-4">
+					<div class="thumbnail">
+						<img class="pull-left img-responsive" src="assets/images/icon-services-it.png" />
+						<div class="caption">
+							<h3>IT<br>Services</h3>
+							<p>Browse the catalog for hardware and items you need</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-4">
+					<div class="thumbnail">
+						<img class="pull-left img-responsive" src="assets/images/icon-services-hr.png" />
+						<div class="caption">
+							<h3>HR<br>Services</h3>
+							<p>Browse the catalog for software and items you need</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-4">
+					<div class="thumbnail">
+						<img class="pull-left img-responsive" src="assets/images/icon-services-procurement.png" />
+						<div class="caption">
+							<h3>Procurement<br>Services</h3>
+							<p>Contact support to make a request, or report a problem</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row sect">
+				<div class="col-md-12">
+					<h3>Latest News</h3>
+					<hr>
+					<div ng-repeat="newsArticle in main.newsArticles | orderBy:'-date'" class="article">
+						<h4>{{ newsArticle.title }}<br><small>{{ newsArticle.relativeDate }}</small></h4>
+						<p>{{ newsArticle.description }}</p>
+						<button class="btn btn-default btn-select">Read More</button>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+
+		<div class="col-md-3">
+			<div>
+				<h3>My Request</h3>
+				<hr>
+				<p><strong>iPhone 6s</strong><br><small>RQ00291 - 6 Days Ago</small></p>
+				<p><strong>MacBook Pro - 15 inch</strong><br><small>RQ00290 - 8 Days Ago</small></p>
+				<p><strong>iPad mini</strong><br><small>RQ00289 - 12 Days Ago</small></p>
+				<button class="btn btn-default btn-select">View More</button>
+			</div>
+			<div>
+				<h3>Do you need help?</h3>
+				<hr>
+				<div class="icon pull-left"><i class="glyphicon glyphicon-phone-alt"></i></div><strong>1 (800) 245-2981</strong><br>
+				<small>24/7 Phone Support</small>
+			</div>
+			<div>
+				<h3>Current Status</h3>
+				<hr>
+				<div class="icon pull-left"><i class="glyphicon glyphicon-ok-sign icon-success"></i></div>
+				<strong>No system is reporting an issue</strong><br>
+				<small><a href="#">More information</a></small>
+			</div>
+		</div>
+
+	</div>
+
+</div>

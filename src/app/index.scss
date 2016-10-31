@@ -1,0 +1,154 @@
+/**
+ *  If you want to override some bootstrap variables, you have to change values here.
+ *  The list of variables are listed here bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss
+ */
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400');
+$navbar-inverse-link-color: #5AADBB;
+$icon-font-path: "../../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
+
+$header-font: 'Source Sans Pro', sans-serif;
+//** Background color for `<body>`.
+$body-bg:               #f1f2f4;
+$primary-color: rgb(255, 102, 0);
+$content-color: #999;
+/**
+ *  Do not remove the comments below. It's the markers used by wiredep to inject
+ *  sass dependencies when defined in the bower.json of your dependencies
+ */
+// bower:scss
+// endbower
+
+.browsehappy {
+	margin: 0.2em 0;
+	background: #ccc;
+	color: #000;
+	padding: 0.2em 0;
+}
+
+.thumbnail {
+	background-color: #fff;
+	min-height: 180px;
+	img.pull-left {
+		padding-top: 20px;
+	}
+	.caption {
+		p {
+			color: $content-color;
+		}
+	}
+}
+
+
+/**
+GLOBAL
+*/
+.btn-select {
+	color: #fff;
+	background-color: $gray-dark;
+	border-color: #ccc;
+	text-transform: uppercase;
+	font-weight: bold;
+	margin: 20px 0;
+}
+.icon {
+	font-size: 28px;
+	padding: 4px 20px 0 0;
+
+	.icon-success {
+		color: #5cb85c;
+	}
+}
+
+.navbar {
+	margin-bottom: 0;
+}
+.navbar-sub {
+	background: rgba(255, 255, 255, 0.5);
+	position: absolute;
+	width: 100%;
+}
+.navbar-sub .navbar-nav > .active > a, .navbar-sub .navbar-nav > .active > a:hover, .navbar-sub .navbar-nav > .active > a:focus {
+	color: $primary-color;
+	background-color: transparent;
+	border-bottom: 4px solid $primary-color;
+}
+hr {
+	border-top: 4px solid $primary-color;
+}
+.navbar-form {
+	.form-control {
+		background-color: transparent;
+		border-color: transparent;
+	}
+	.input-group-btn {
+		.btn-default {
+			background-color: transparent;
+			border-color: transparent;
+		}
+	}
+}
+footer {
+	padding: 30px 0;
+}
+/**
+MAIN
+*/
+.jumbotron {
+	background: url("../assets/images/background.jpg") no-repeat 0 0;
+	background-size: cover;
+	h1 {
+		font-family: $header-font;
+		color: #333333;
+		span {
+			font-weight: 300;
+		}
+	}
+}
+.article {
+	padding: 20px 0;
+	border-bottom: 4px solid #ccc;
+	&:first-of-type {
+		padding-top: 0;
+	}
+	&:last-of-type {
+		border-bottom-style: none;
+		padding-bottom: 0;
+	}
+	p {
+		color: $content-color;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.jumbotron {
+		padding-top: 140px;
+		padding-bottom: 85px;
+		h1 {
+			font-size: 45px;
+			margin-bottom: 30px;
+		}
+	}
+	.sect {
+		background-color: #fff;
+		border: 1px solid #ddd;
+		//padding-top: 15px;
+		margin-bottom: 15px;
+		padding: 30px 15px;
+		.thumbnail {
+			padding-left: 30px;
+			padding-right: 30px;
+			margin-bottom: 0;
+			.caption {
+				h3 {
+					font-size: 20px;
+				}
+			}
+		}
+	}
+}
+/**
+ *  Do not remove the comments below. It's the markers used by gulp-inject to inject
+ *  all your sass files automatically
+ */
+// injector
+// endinjector
