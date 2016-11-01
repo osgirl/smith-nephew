@@ -10,9 +10,16 @@
 		$stateProvider
 			.state('home', {
 				url: '/',
-				templateUrl: 'app/main/main.html',
-				controller: 'MainController',
-				controllerAs: 'main'
+				views: {
+					content: {
+						templateUrl: 'app/main/main.html',
+						controller: 'MainController',
+						controllerAs: 'main'
+					},
+					footer: {
+						templateUrl: 'app/templates/footer.html'
+					}
+				}
 			});
 
 		$urlRouterProvider.otherwise('/');

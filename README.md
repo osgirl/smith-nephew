@@ -3,8 +3,8 @@
 
 ### Smith & Nephew Site
 
-1)  To install Node.js.
-2)  Install Git.
+1)  To install Node.js.  
+2)  Install Git.  
 3) Clone directory from Git
 - `git clone <repository-url>` (eg.https://github.com/EskoCruz/smith-nephew.git)  
 
@@ -15,7 +15,7 @@
 
 4) To run server:
 - `gulp serve`
-- Visit your app at http://localhost:3000
+- Visit your app at [http://localhost:3000](http://localhost:3000)
 
 5) Other helpful commands:
 - `gulp` or `gulp build` to build an optimized version of your application in /dist
