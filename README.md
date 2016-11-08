@@ -3,6 +3,10 @@
 
 ### Smith & Nephew Site
 
+View site hosted on AWS S3:  
+https://s3-us-west-1.amazonaws.com/newrocket/smith-nephew/index.html
+
+#### Load Site Locally
 1)  To install Node.js.  
 2)  Install Git.  
 3) Clone directory from Git
