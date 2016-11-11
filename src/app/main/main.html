@@ -101,9 +101,9 @@
 			<div>
 				<h3>My Request</h3>
 				<hr>
-				<p><strong>iPhone 6s</strong><br><small>RQ00291 - 6 Days Ago</small></p>
-				<p><strong>MacBook Pro - 15 inch</strong><br><small>RQ00290 - 8 Days Ago</small></p>
-				<p><strong>iPad mini</strong><br><small>RQ00289 - 12 Days Ago</small></p>
+				<div ng-repeat="request in main.requests">
+					<p><strong>{{ request.item }}</strong><br><small>{{ request.id }} - {{ request.relativeDate }}</small></p>
+				</div>
 				<button class="btn btn-default btn-select">View More</button>
 			</div>
 			<div>

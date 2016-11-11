@@ -6,22 +6,32 @@
 		.controller('MainController', MainController);
 
 	/** @ngInject */
-	function MainController(news, moment) {
+	function MainController(news, request, moment) {
 		var vm = this;
 
 		vm.newsArticles = [];
+		vm.requests = [];
 
 		activate();
 
 		function activate() {
 			getNewsArticle();
+			getRequestItem();
 		}
 
 		function getNewsArticle() {
 			vm.newsArticles = news.getArticle();
 
 			angular.forEach(vm.newsArticles, function (article) {
-				article.relativeDate = moment(article.date).fromNow();
+				article.relativeDate = moment(article.date, 'YYYY MM DD').fromNow();
+			});
+		}
+
+		function getRequestItem() {
+			vm.requests = request.getRequest();
+
+			angular.forEach(vm.requests, function (item) {
+				item.relativeDate = moment(item.date, 'YYYY MM DD').fromNow();
 			});
 		}
 	}
