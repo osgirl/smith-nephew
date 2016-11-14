@@ -6,7 +6,7 @@
 		.controller('MainController', MainController);
 
 	/** @ngInject */
-	function MainController(news, request, moment) {
+	function MainController(news, request, search, moment) {
 		var vm = this;
 
 		vm.newsArticles = [];
@@ -34,5 +34,9 @@
 				item.relativeDate = moment(item.date, 'YYYY MM DD').fromNow();
 			});
 		}
+
+		vm.getLocation = function(val) {
+			return search.getQuestions(val);
+		};
 	}
 })();

@@ -40,11 +40,20 @@
 		<div class="row">
 			<div class="col-lg-8 col-lg-offset-2">
 				<div class="input-group input-group-lg">
-					<input type="text" class="form-control" placeholder="Search for...">
+					<input type="text" class="form-control"
+						   ng-model="asyncSelected" placeholder="Search for..."
+						   uib-typeahead="address for address in main.getLocation($viewValue)"
+						   typeahead-loading="loadingLocations" typeahead-no-results="noResults">
 					<span class="input-group-btn">
-			<button class="btn btn-default" type="button"><i class="glyphicon glyphicon-search"></i></button>
-		  </span>
+						<button class="btn btn-default" type="button"><i class="glyphicon glyphicon-search"></i></button>
+		  			</span>
 				</div><!-- /input-group -->
+				<div class="pull-left" style="position: absolute">
+					<i ng-show="loadingLocations" class="glyphicon glyphicon-refresh"></i>
+					<div ng-show="noResults">
+						<i class="glyphicon glyphicon-remove"></i> No Results Found
+					</div>
+				</div>
 			</div><!-- /.col-lg-6 -->
 		</div><!-- /.row -->
 	</div>
