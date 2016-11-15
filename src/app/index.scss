@@ -42,6 +42,17 @@ $content-color: #999;
 /**
 GLOBAL
 */
+
+//  Remove Button Focus Glow
+.form-control:focus { border-color: transparent }
+.btn:focus,
+.btn:active:focus,
+.angular-bootstrap-contextmenu a:focus,
+.angular-bootstrap-contextmenu a:active:focus
+{
+	outline: none;
+}
+
 .badge {
 	background-color: $gray-lighter;
 	color: $primary-color;
@@ -95,7 +106,7 @@ GLOBAL
 			cursor: pointer;
 			box-shadow: none;
 			&:focus {
-				width: 400px;
+				width: 200px;
 				z-index: 1;
 				border-bottom: 1px solid #BBB;
 				cursor: text;
@@ -179,7 +190,7 @@ MAIN
 	}
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: $screen-sm-min) {
 	.jumbotron {
 		padding-top: 140px;
 		padding-bottom: 85px;
@@ -203,6 +214,15 @@ MAIN
 				h3 {
 					font-size: 20px;
 				}
+			}
+		}
+	}
+}
+@media (min-width: $screen-lg-min) {
+	.navbar-sub {
+		#wrap {
+			input[type="text"]:focus {
+				width: 400px;
 			}
 		}
 	}
