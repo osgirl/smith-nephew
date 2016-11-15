@@ -42,8 +42,9 @@
 				<div class="input-group input-group-lg">
 					<input type="text" class="form-control"
 						   ng-model="asyncSelected" placeholder="Search for..."
-						   uib-typeahead="address for address in main.getLocation($viewValue)"
-						   typeahead-loading="loadingLocations" typeahead-no-results="noResults">
+						   uib-typeahead="question for question in main.getQuestions($viewValue)"
+						   typeahead-loading="loadingLocations" typeahead-no-results="noResults"
+						   typeahead-min-length="3" typeahead-wait-ms="500">
 					<span class="input-group-btn">
 						<button class="btn btn-default" type="button"><i class="glyphicon glyphicon-search"></i></button>
 		  			</span>

@@ -35,7 +35,7 @@
 			});
 		}
 
-		vm.getLocation = function(val) {
+		vm.getQuestions = function(val) {
 			return search.getQuestions(val);
 		};
 	}
