@@ -23,6 +23,7 @@ function search($http, $log) {
 				order: 'desc',
 				sort: 'activity',
 				intitle: val,
+				pagesize: 8,
 				site: 'stackoverflow'
 			}
 		}).then(function(response){
